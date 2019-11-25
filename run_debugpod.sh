@@ -7,7 +7,6 @@ image='quay.io/jgzurano/k8s-debugpod'
 kubectl run -it --rm "$pod_name" \
     --namespace "$ns" \
     --image="$image" \
-    --restart=Never \
-    -- sh
+    --restart=Never
 
 kubectl delete pod "$pod_name" --namespace "$ns"
