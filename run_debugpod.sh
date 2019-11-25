@@ -8,5 +8,3 @@ kubectl run -it --rm "$pod_name" \
     --namespace "$ns" \
     --image="$image" \
     --restart=Never
-
-kubectl delete pod "$pod_name" --namespace "$ns"
