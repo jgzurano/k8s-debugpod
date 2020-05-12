@@ -3,7 +3,7 @@ FROM alpine:3.10
 RUN apk add --no-cache --update \
     bash vim jq \
     curl ca-certificates \
-    bind-tools openssh-client \
+    bind-tools apache2-utils openssh-client \
     python3 openjdk11-jre-headless \
     && pip3 install pipenv awscli \
     && ln -s /usr/bin/python3 /usr/bin/python \
