@@ -17,4 +17,6 @@ RUN curl -s https://archive.apache.org/dist/kafka/2.2.1/kafka_2.12-2.2.1.tgz | t
 COPY kafka/config/client.properties /kafka/config/
 COPY .bashrc /root/
 
+RUN adduser -D -S -u 1000 limited-user
+
 ENTRYPOINT [ "bash" ]
